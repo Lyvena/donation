@@ -7,16 +7,21 @@ import { Textarea } from "@/components/ui/textarea"
 import { Heart, Gift, DollarSign, CheckCircle } from 'lucide-react';
 import DonationForm from '@/components/DonationForm';
 import RecommendationList from '@/components/RecommendationList';
+import Logo from '@/components/Logo';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-100 to-white">
       <header className="bg-white shadow-md p-4">
         <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-blue-600">Donation Agent</h1>
-          <nav>
+          <Logo />
+          <nav className="flex gap-4">
             <Button variant="ghost">About</Button>
             <Button variant="ghost">Contact</Button>
+            <Link to="/signup">
+              <Button>Sign Up</Button>
+            </Link>
           </nav>
         </div>
       </header>
